@@ -57,23 +57,27 @@
 
   <h1>Interactive t-SNE Graph with Custom Phrase</h1>
 
-  <!-- Step 1: File Selection -->
-<div style="display: flex; align-items: center; flex-wrap: wrap; gap: 10px; margin-top: 10px;">
-  <strong style="margin-right: 6px;">Step 1: </strong>
-    
-  <select id="preloadedFiles" onchange="handleFileSelection()">
-    <option value="">Select preloaded file...</option>
-    <option value="ways_to_get_from_here_to_there.csv">The character _________ to the kitchen. (Ways to move)</option>
-    <option value="ways_to_eat_a_sandwich.csv">The character _________ the sandwich. (Ways to eat)</option>
-    <option value="ways_to_express_speaking.csv">"Let me do that," the character _________. (Ways to speak)</option>
-  </select>
+<!-- Step 1: File Selection -->
+<div style="margin-top: 10px;">
+  <strong>Step 1:</strong>
+  <div style="font-weight: normal; margin-top: 4px;">
+    Choose what dataset to use. You can either select from the dropdown menu or upload your own CSV that contains a single column and a header.
+  </div>
 
-  <span style="font-weight: bold;">  OR  </span>
+  <div style="display: flex; align-items: center; flex-wrap: wrap; gap: 10px; margin-top: 10px;">
+    <select id="preloadedFiles" onchange="handleFileSelection()">
+      <option value="">Select preloaded file...</option>
+      <option value="ways_to_get_from_here_to_there.csv">The character _________ to the kitchen. (Ways to move)</option>
+      <option value="ways_to_eat_a_sandwich.csv">The character _________ the sandwich. (Ways to eat)</option>
+      <option value="ways_to_express_speaking.csv">"Let me do that," the character _________. (Ways to speak)</option>
+    </select>
 
-  <div class="file-upload-container" style="margin-top: 0;">
-    <label for="csvUpload" class="custom-file-upload">Upload CSV</label>
-    <input type="file" id="csvUpload" style="display: none;" onchange="updateFileLabel()" />
-    <span class="description" style="margin-left: 10px;">Accepted: a single-column CSV with one phrase per line.</span>
+    <span style="font-weight: bold;">OR</span>
+
+    <div class="file-upload-container" style="margin-top: 0;">
+      <label for="csvUpload" class="custom-file-upload">Upload your own CSV</label>
+      <input type="file" id="csvUpload" style="display: none;" onchange="updateFileLabel()" />
+    </div>
   </div>
 </div>
 
