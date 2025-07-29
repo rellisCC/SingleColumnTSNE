@@ -1,0 +1,148 @@
+/* General page styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 10px 20px;
+  padding: 0;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f9f9f9;
+}
+
+h1 {
+  color: #4CAF50;
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 22px;
+}
+
+/* Dropdown and file upload container */
+.file-upload-container {
+  display: inline-flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+/* Dropdown select */
+select {
+  padding: 6px 10px;
+  font-size: 14px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  background-color: white;
+}
+
+/* File upload label */
+.custom-file-upload {
+  display: inline-block;
+  padding: 8px 12px;
+  cursor: pointer;
+  background-color: #4CAF50;
+  color: white;
+  border-radius: 4px;
+  font-size: 14px;
+  margin-left: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.custom-file-upload:hover {
+  background-color: #45a049;
+}
+
+/* Selected file display */
+#fileNameDisplay {
+  margin-top: 10px;
+  font-style: italic;
+  color: #555;
+}
+
+/* Description under file area */
+.description {
+  display: block;
+  font-size: 13px;
+  color: #666;
+  margin-top: 4px;
+}
+
+.input-description {
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+/* Input fields */
+input[type="text"] {
+  padding: 8px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 300px;
+  max-width: 90%;
+}
+
+input[type="file"] {
+  display: none;
+}
+
+/* Buttons */
+button {
+  padding: 8px 16px;
+  font-size: 14px;
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+  background-color: #4CAF50;
+  color: white;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+button:disabled {
+  background-color: #ddd;
+  cursor: not-allowed;
+  color: #999;
+}
+
+/* Graph container */
+#output {
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 5px;
+  margin-top: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Loading message */
+#loadingMessage {
+  margin-top: 10px;
+  font-weight: bold;
+  color: blue;
+  display: none;
+}
+
+/* Step container spacing */
+div {
+  margin-bottom: 10px;
+}
+
+/* Responsive layout */
+@media (max-width: 600px) {
+  select,
+  button,
+  input[type="text"] {
+    width: 100%;
+    margin-top: 8px;
+  }
+
+  .file-upload-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .custom-file-upload {
+    margin-left: 0;
+    margin-top: 8px;
+  }
+}
