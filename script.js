@@ -117,10 +117,20 @@ global tfidf_vectorizer, tsne_embeddings, original_text
 
 original_text = df['text'].tolist()
 
-vectorizer = TfidfVectorizer(max_features=1000)
-X_tfidf = vectorizer.fit_transform(original_text)
+from sklearn.preprocessing import normalize
 
-tsne = TSNE(n_components=2, random_state=42, perplexity=30, init='pca')
+vectorizer = TfidfVectorizer(ngram_range=(1,2), max_features=2000)
+X_tfidf = vectorizer.fit_transform(original_text)
+X_tfidf = normalize(X_tfidf)
+
+tsne = TSNE(
+    n_components=2,
+    perplexity=5,
+    learning_rate=150,
+    n_iter=1000,
+    init='random',
+    random_state=42
+)
 tsne_result = tsne.fit_transform(X_tfidf.toarray())
 
 x_values = tsne_result[:, 0].tolist()
