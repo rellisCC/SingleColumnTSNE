@@ -113,6 +113,8 @@ df = df[df['text'] != ""]
 if df['text'].nunique() < 5:
     raise ValueError("Not enough unique text entries for t-SNE.")
 
+global tfidf_vectorizer, tsne_embeddings, original_text
+
 original_text = df['text'].tolist()
 
 vectorizer = TfidfVectorizer(max_features=1000)
@@ -124,8 +126,6 @@ tsne_result = tsne.fit_transform(X_tfidf.toarray())
 x_values = tsne_result[:, 0].tolist()
 y_values = tsne_result[:, 1].tolist()
 
-# Save for reuse in addUserPhrase
-global tfidf_vectorizer, tsne_embeddings, original_text
 tfidf_vectorizer = vectorizer
 tsne_embeddings = tsne_result
     `);
