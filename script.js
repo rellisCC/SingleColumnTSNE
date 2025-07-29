@@ -151,7 +151,7 @@ tsne_embeddings = tsne_result
       xaxis: { visible: false },
       yaxis: { visible: false },
       margin: { l: 20, r: 20, b: 20, t: 40 },
-      showlegend: false
+      showlegend: false,
       hovermode: 'closest' //supposedly will make the hover text be right where the mouse is
     };
 
