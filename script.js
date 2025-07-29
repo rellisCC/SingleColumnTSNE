@@ -147,7 +147,7 @@ tsne_embeddings = tsne_result
     };
 
     const layout = {
-      title: "t-SNE Projection of Phrases",
+      title: "t-SNE Projection of Words",
       xaxis: { visible: false },
       yaxis: { visible: false },
       margin: { l: 20, r: 20, b: 20, t: 40 },
