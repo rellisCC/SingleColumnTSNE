@@ -125,7 +125,7 @@ x_values = tsne_result[:, 0].tolist()
 y_values = tsne_result[:, 1].tolist()
 
 # Save for reuse in addUserPhrase
-global tfidf_vectorizer, tsne_embeddings
+global tfidf_vectorizer, tsne_embeddings, original_text
 tfidf_vectorizer = vectorizer
 tsne_embeddings = tsne_result
     `);
