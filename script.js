@@ -152,7 +152,12 @@ tsne_embeddings = tsne_result
       yaxis: { visible: false },
       margin: { l: 20, r: 20, b: 20, t: 40 },
       showlegend: false,
-      hovermode: 'closest' //supposedly will make the hover text be right where the mouse is
+      hovermode: 'closest', //supposedly will make the hover text be right where the mouse is
+      hoverlabel: {
+        font: { color: 'white'},
+        bgcolor: '#333',
+        bordercolor: '#999'
+      }
     };
 
     Plotly.newPlot('output', [trace], layout);
